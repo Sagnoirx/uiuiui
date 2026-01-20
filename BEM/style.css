@@ -1,0 +1,66 @@
+/* ===== BEM rápido:
+   .header            -> Bloque
+   .header__logo      -> Elemento del bloque
+   .header__link--active -> Modificador (una "variación")
+*/
+
+:root{
+  --bg: #111827;
+  --text: #ffffff;
+  --muted: #cbd5e1;
+  --accent: #22c55e;
+}
+
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header{
+  background: var(--bg);
+  padding: 16px 0;
+}
+
+.header__container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header__logo{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.header__nav{
+  display: flex;
+  gap: 14px;
+}
+
+.header__link{
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.header__link:hover{
+  color: var(--text);
+  background: rgba(255,255,255,0.08);
+}
+
+/* Modificador: el link activo */
+.header__link--active{
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.18);
+}
